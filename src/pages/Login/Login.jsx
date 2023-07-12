@@ -1,7 +1,10 @@
-import React from "react";
+import React,{useState} from "react";
 import "./Login.scss";
 import Header from "../../components/Header/Header";
 import LoginForm from "../../components/LoginForm/LoginForm";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../../firebase.config";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = ({ setUser }) => {
   const [email, setEmail] = useState("");
