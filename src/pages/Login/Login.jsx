@@ -3,7 +3,7 @@ import "./Login.scss";
 import Header from "../../components/Header/Header";
 import LoginForm from "../../components/LoginForm/LoginForm";
 
-const Login = ({ setUser }) => {
+const Login = () => {
   return (
     <div className="login">
       <div>

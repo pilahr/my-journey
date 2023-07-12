@@ -14,7 +14,7 @@ const App = () => {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Login setUser={setUser}/>} />
+          <Route path="/" element={<Login />} />
         </Routes>
 
         {/* {user && ( */}
