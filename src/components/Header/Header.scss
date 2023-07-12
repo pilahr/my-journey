@@ -10,7 +10,6 @@
   border-radius: 15px;
   position: fixed;
   top: 0;
-  // background-color: $color-gray;
   padding: 10px;
   position: absolute;
   border-bottom: 2px solid $color-black-translucent;
@@ -27,6 +26,8 @@
     &--text {
       color: $text-black;
     }
+    
+
 
   }
 }

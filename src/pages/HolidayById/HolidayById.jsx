@@ -1,8 +1,15 @@
 import React from "react";
 import "./HolidayById.scss";
+import Header from "../../components/Header/Header";
 
 const HolidayById = () => {
-  return <div>HolidayById</div>;
+  return (
+    <div>
+      <div>
+        <Header />
+      </div>
+    </div>
+  );
 };
 
 export default HolidayById;

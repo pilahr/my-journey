@@ -17,14 +17,14 @@ const App = () => {
           <Route path="/" element={<Login setUser={setUser}/>} />
         </Routes>
 
-        {user && (
+        {/* {user && ( */}
           <Routes>
             <Route path="/holidays" element={<Holidays />} />
             <Route path="/holiday/:id" element={<HolidayById />} />
             <Route path="/holiday/add" element={<AddHoliday />} />
             <Route path="/holiday/edit/:id" element={<EditHoliday />} />
           </Routes>
-        )}
+        {/* )} */}
       </Router>
     </>
   );
