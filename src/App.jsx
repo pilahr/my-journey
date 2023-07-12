@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.scss";
 import Login from "./pages/Login/Login";
@@ -8,16 +8,23 @@ import AddHoliday from "./pages/AddHoliday/AddHoliday";
 import EditHoliday from "./pages/EditHoliday/EditHoliday";
 
 const App = () => {
+  const [user, setUser] = useState();
+
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/holidays" element={<Holidays />} />
-          <Route path="/holiday/:id" element={<HolidayById />} />
-          <Route path="/holiday/add" element={<AddHoliday />} />
-          <Route path="/holiday/edit/:id" element={<EditHoliday />} />
+          <Route path="/" element={<Login setUser={setUser}/>} />
         </Routes>
+
+        {user && (
+          <Routes>
+            <Route path="/holidays" element={<Holidays />} />
+            <Route path="/holiday/:id" element={<HolidayById />} />
+            <Route path="/holiday/add" element={<AddHoliday />} />
+            <Route path="/holiday/edit/:id" element={<EditHoliday />} />
+          </Routes>
+        )}
       </Router>
     </>
   );
