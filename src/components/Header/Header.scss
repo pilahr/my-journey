@@ -1,0 +1,31 @@
+@use "../../styles/main" as *;
+@use "../../styles/variables" as *;
+
+.heading {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  border-radius: 15px;
+  position: fixed;
+  top: 0;
+  background-color: $color-gray;
+  padding: 10px;
+  position: absolute;
+
+  &__text {
+    color: $text-white;
+  }
+
+  &__links {
+    display: flex;
+    gap: 30px;
+    margin: 50px;
+
+    &--text {
+      color: $text-white;
+    }
+
+  }
+}
