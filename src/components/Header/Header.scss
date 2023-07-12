@@ -10,21 +10,22 @@
   border-radius: 15px;
   position: fixed;
   top: 0;
-  background-color: $color-gray;
+  // background-color: $color-gray;
   padding: 10px;
   position: absolute;
+  border-bottom: 2px solid $color-black-translucent;
 
   &__text {
-    color: $text-white;
+    color: $text-black;
   }
 
   &__links {
     display: flex;
     gap: 30px;
-    margin: 50px;
+    margin: 30px;
 
     &--text {
-      color: $text-white;
+      color: $text-black;
     }
 
   }
