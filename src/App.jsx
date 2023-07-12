@@ -8,13 +8,13 @@ import AddHoliday from "./pages/AddHoliday/AddHoliday";
 import EditHoliday from "./pages/EditHoliday/EditHoliday";
 
 const App = () => {
-  // const [user, setUser] = useState();
+  const [user, setUser] = useState();
 
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Login setUser={setUser} />} />
         </Routes>
 
         {user && (
