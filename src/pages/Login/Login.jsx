@@ -16,7 +16,7 @@ const Login = ({ setUser }) => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         setUser(userCredential.user);
-        navigate("/weather");
+        navigate("/holidays");
       })
       .catch((error) => {
         console.log(error);
