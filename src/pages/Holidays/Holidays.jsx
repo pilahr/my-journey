@@ -1,12 +1,16 @@
 import React from "react";
 import "./Holidays.scss";
 import Header from "../../components/Header/Header";
+import HolidaysContainer from "../../containers/HolidaysContainer/HolidaysContainer";
 
-const Holidays = () => {
+const Holidays = ({holidaysData}) => {
   return (
-    <div>
+    <div className="holidays-page">
       <div>
         <Header />
+      </div>
+      <div className="holidays-page__cards">
+        <HolidaysContainer holidaysData={holidaysData}/>
       </div>
     </div>
   );
