@@ -2,13 +2,15 @@ import React from "react";
 import "./HolidaysContainer.scss";
 import HolidayCard from "../../components/HolidayCard/HolidayCard";
 
-const HolidaysContainer = ({ holidaysData }) => {
+const HolidaysContainer = ({ holidays }) => {
   return (
-    <div className="holidays-container">
-
-        <HolidayCard />
-
-    </div>
+    <>
+      {holidays.map((holiday, index) => (
+        <div className="holidays-container" key={index}>
+          <HolidayCard holiday={holiday} key={index}/>
+        </div>
+      ))}
+    </>
   );
 };
 

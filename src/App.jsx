@@ -9,11 +9,7 @@ import EditHoliday from "./pages/EditHoliday/EditHoliday";
 
 const App = () => {
   const [user, setUser] = useState(true);
-  const [holidays, setHolidays] = useState();
-
-  console.log(holidays);///
-  console.log(typeof holidays);
-
+  const [holidays, setHolidays] = useState([]);
 
   const getHolidays = async () => {
     let url = "http://localhost:8080/holidays";
@@ -28,6 +24,8 @@ const App = () => {
     getHolidays();
   }, []);
 
+
+
   return (
     <>
       <Router>
@@ -37,7 +35,7 @@ const App = () => {
 
         {user && (
           <Routes>
-            <Route path="/holidays" element={<Holidays />} holidaysData={holidays}/>
+            <Route path="/holidays" element={<Holidays holidays={holidays}/>}/>
             <Route path="/holiday/:id" element={<HolidayById />} />
             <Route path="/holiday/add" element={<AddHoliday />} />
             <Route path="/holiday/edit/:id" element={<EditHoliday />} />
