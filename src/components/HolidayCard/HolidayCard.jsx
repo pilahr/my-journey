@@ -25,7 +25,7 @@ const HolidayCard = ({ holiday }) => {
         </div>
       </div>
 
-      <img className="holiday-card__image" src={image} alt="holiday's image" />
+      <img className="holiday-card__img" src={image} alt="holiday's image" />
     </div>
   );
 };
