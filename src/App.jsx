@@ -37,7 +37,7 @@ const App = () => {
           <Routes>
             <Route path="/holidays" element={<Holidays holidays={holidays}/>}/>
             <Route path="/holiday/:id" element={<HolidayById />} />
-            <Route path="/holiday/add" element={<AddHoliday />} />
+            <Route path="/holiday/add" element={<AddHoliday holidays={holidays}/>} />
             <Route path="/holiday/edit/:id" element={<EditHoliday />} />
           </Routes>
         )}
