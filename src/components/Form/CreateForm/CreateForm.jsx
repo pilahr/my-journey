@@ -71,7 +71,7 @@ const CreateForm = ({ holidays, handleSubmit, defaultFormState }) => {
         />
 
         <div className="create-form-container__form--button">
-          <Button buttonText="Submit" func="create" onClick={handleSubmit} />
+          <Button buttonText="Submit" onClick={handleSubmit} />
         </div>
       </form>
     </div>
