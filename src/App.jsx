@@ -8,7 +8,7 @@ import AddHoliday from "./pages/AddHoliday/AddHoliday";
 import EditHoliday from "./pages/EditHoliday/EditHoliday";
 
 const App = () => {
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState();
   const [holidays, setHolidays] = useState([]);
 
   const getHolidays = async () => {

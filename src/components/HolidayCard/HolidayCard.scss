@@ -7,10 +7,12 @@
   width: 302px;
   height: 280px;
   margin-top: 20px;
+  padding: 10px;
 
   &__text-wrap {
     display: flex;
     padding: 5px;
+    max-width: 90%;
 
     &--header {
       display: flex;
@@ -49,6 +51,7 @@
     height: 400px;
 
     &__text-wrap {
+
       &--header {
         font-size: 1.2rem;
       }
