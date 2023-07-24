@@ -7,7 +7,7 @@ const HolidaysContainer = ({ holidays }) => {
     <>
       {holidays.map((holiday, index) => (
         <div className="holidays-container" key={index}>
-          <HolidayCard holiday={holiday} key={index}/>
+          <HolidayCard holiday={holiday} key={index} className="holidays-container__cards"/>
         </div>
       ))}
     </>
