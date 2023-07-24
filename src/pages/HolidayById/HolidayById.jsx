@@ -18,7 +18,7 @@ const HolidayById = () => {
 
   useEffect(() => {
     getHolidayById(id);
-  }, []);
+  }, [id]);
 
   const handleDelete = async () => {
     const result = await fetch(`http://localhost:8080/holidays/${id}`, {

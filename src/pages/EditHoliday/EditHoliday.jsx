@@ -38,7 +38,7 @@ const EditHoliday = () => {
 
   useEffect(() => {
     getHolidayById(id);
-  }, []);
+  }, [id]);
 
   return (
     <div className="editHoliday">

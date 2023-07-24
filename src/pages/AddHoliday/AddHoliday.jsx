@@ -2,11 +2,11 @@ import React from "react";
 import "./AddHoliday.scss";
 import Header from "../../components/Header/Header";
 import CreateForm from "../../components/Form/CreateForm/CreateForm";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const AddHoliday = ({ holidays }) => {
   const navigate = useNavigate();
-  const { id } = useParams();
+
 
   const handleSubmit = async (holidays) => {
     const result = await fetch("http://localhost:8080/holidays", {
