@@ -27,7 +27,7 @@ const CreateForm = ({ holidays, handleSubmit, defaultFormState }) => {
         <label className="create-form-container__form--label">Date</label>
         <input
           className="create-form-container__form--input"
-          placeholder="Add arrival date yyyy-mm-dd"
+          placeholder="YYYY-MM-DD"
           type="text"
           value={holidays.date}
           onInput={(event) =>
@@ -37,7 +37,7 @@ const CreateForm = ({ holidays, handleSubmit, defaultFormState }) => {
         <label className="create-form-container__form--label">Image URL</label>
         <input
           className="create-form-container__form--input"
-          placeholder="http://www.image.jpeg"
+          placeholder="http://www.example-image.jpeg"
           type="text"
           value={holidays.image}
           onInput={(event) =>
@@ -49,7 +49,7 @@ const CreateForm = ({ holidays, handleSubmit, defaultFormState }) => {
         </label>
         <input
           className="create-form-container__form--input"
-          placeholder="How's the trip"
+          placeholder="How's the trip?"
           type="text"
           value={holidays.text}
           onInput={(event) =>

@@ -38,7 +38,7 @@ const EditForm = ({ handleUpdate, holiday }) => {
           type="text"
           defaultValue={holiday.date}
           onChange={(event) =>
-            setHolidayData({ ...holidayData, holidays: event.target.value })
+            setHolidayData({ ...holidayData, date: event.target.value })
           }
         />
         <label className="edit-form-container__form--label">Image URL</label>

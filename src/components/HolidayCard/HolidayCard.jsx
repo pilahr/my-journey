@@ -20,8 +20,9 @@ const HolidayCard = ({ holiday }) => {
           <p>{cleanedDate}</p>
         </div>
       </div>
-
-      <img className="holiday-card__img" src={image} alt="holiday's pic" />
+      <div className="holiday-card__img">
+        <img className="holiday-card__img--img" src={image} alt="holiday's pic" />
+      </div>
     </div>
   );
 };

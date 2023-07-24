@@ -12,20 +12,22 @@
     justify-content: center;
     align-items: center;
     padding: 5px;
+    margin-left: 15px;
 
     &--header {
       display: flex;
       flex-direction: column;
-      padding-left: 10px;
-      font-size: 1rem;
 
       .top-wrap {
         display: flex;
+        margin: 10px;
       }
 
       .location-icon-with-text {
         display: flex;
         align-items: center;
+        height: 50px;
+        width: 100%;
       }
 
       .location {
@@ -34,14 +36,15 @@
       }
 
       .icons {
-        margin-left: 90px;
+        height: 50px;
+        display: flex;
       }
 
       .edit-icon,
       .delete-icon {
         width: 20px;
         height: 20px;
-        margin: 10px;
+        margin: 3px;
       }
 
       .edit-icon:hover,
@@ -57,7 +60,7 @@
     align-items: center;
 
     &--img {
-      width: 260px;
+      max-width: 260px;
       height: 180px;
       box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
       margin: 5px 20px;
@@ -78,12 +81,18 @@
   }
 }
 
+.holidayByIdCard-date {
+  font-size: 1rem;
+  color: $text-gray;
+}
+
 @media screen and (min-width: $tablet-breakpoint) {
   .holidayByIdCard {
     width: 700px;
     height: 760px;
 
     &__wrap {
+      padding-left: 20px;
 
       &--header {
         font-size: 1.2rem;
@@ -92,11 +101,12 @@
           width: 40px;
           height: 40px;
         }
-  
+
         .icons {
-          margin-left: 320px;
+          margin-left: 220px;
+
         }
-  
+
         .edit-icon,
         .delete-icon {
           width: 40px;
@@ -108,8 +118,56 @@
 
     &__img-text-wrap {
       &--img {
-        width: 640px;
+        max-width: 640px;
         height: 480px;
+      }
+
+      &--text {
+        width: 640px;
+        height: 200px;
+
+        .description {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .holidayByIdCard {
+    width: 1000px;
+    height: 760px;
+    padding: 20px;
+
+    &__wrap {
+
+      &--header {
+        font-size: 1.4rem;
+
+        .location {
+          width: 50px;
+          height: 50px;
+        }
+
+        .icons {
+          margin-left: 280px;
+        }
+
+        .edit-icon,
+        .delete-icon {
+          width: 40px;
+          height: 40px;
+          margin: 10px;
+        }
+      }
+    }
+
+    &__img-text-wrap {
+      &--img {
+        max-width: 900px;
+        height: 480px;
+        margin: 30px;
       }
 
       &--text {
