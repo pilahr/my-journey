@@ -4,13 +4,9 @@ import Logo from "../Logo/Logo";
 import Location from "../../assets/images/location.png";
 
 const HolidayCard = ({ holiday }) => {
-  const {
-    place,
-    image,
-    date: { arrival },
-  } = holiday;
+  const { place, image, date } = holiday;
 
-  const arrivalDate = arrival.split("T")[0];
+  const cleanedDate = date.split("T")[0];
 
   return (
     <div className="holiday-card">
@@ -21,7 +17,7 @@ const HolidayCard = ({ holiday }) => {
             <img className="location" src={Location} alt="location pin" />
             {place}
           </h4>
-          <p>{arrivalDate}</p>
+          <p>{cleanedDate}</p>
         </div>
       </div>
 

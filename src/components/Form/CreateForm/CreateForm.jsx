@@ -12,7 +12,7 @@ const CreateForm = ({ holidays, handleSubmit, defaultFormState }) => {
   };
   return (
     <div className="create-form-container">
-      <h2 className="create-form-container__title">Add Holiday</h2>
+      <h2 className="create-form-container__title">Add To Blog..</h2>
       <form className="create-form-container__form" onSubmit={handleValidation}>
         <label className="create-form-container__form--label">Place</label>
         <input
@@ -24,31 +24,16 @@ const CreateForm = ({ holidays, handleSubmit, defaultFormState }) => {
             setHolidayData({ ...holidayData, place: event.target.value })
           }
         />
-        <label className="create-form-container__form--label">
-          Date Of Arrival
-        </label>
+        <label className="create-form-container__form--label">Date</label>
         <input
           className="create-form-container__form--input"
           placeholder="Add arrival date yyyy-mm-dd"
           type="text"
-          value={holidays.arrival}
+          value={holidays.date}
           onInput={(event) =>
-            setHolidayData({ ...holidayData, holidays: event.target.value })
+            setHolidayData({ ...holidayData, date: event.target.value })
           }
         />
-        <label className="create-form-container__form--label">
-          Date Of Departure
-        </label>
-        <input
-          className="create-form-container__form--input"
-          placeholder="Add departure date yyyy-mm-dd"
-          type="text"
-          value={holidays.departure}
-          onInput={(event) =>
-            setHolidayData({ ...holidayData, holidays: event.target.value })
-          }
-        />
-
         <label className="create-form-container__form--label">Image URL</label>
         <input
           className="create-form-container__form--input"
@@ -59,7 +44,9 @@ const CreateForm = ({ holidays, handleSubmit, defaultFormState }) => {
             setHolidayData({ ...holidayData, image: event.target.value })
           }
         />
-        <label className="create-form-container__form--label">Text</label>
+        <label className="create-form-container__form--label">
+          Description
+        </label>
         <input
           className="create-form-container__form--input"
           placeholder="How's the trip"

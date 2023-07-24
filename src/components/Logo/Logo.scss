@@ -14,3 +14,15 @@
     color: $text-white;
   }
 }
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .logo {
+    width: 60px;
+    height: 60px;
+
+    &__text {
+      font-size: 1.6rem;
+    }
+  }
+  
+}

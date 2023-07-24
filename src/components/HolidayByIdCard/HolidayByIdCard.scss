@@ -1,0 +1,125 @@
+@use "../../styles/main" as *;
+@use "../../styles/variables" as *;
+
+.holidayByIdCard {
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  border-radius: 5px;
+  width: 320px;
+  height: 400px;
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+    &--header {
+      display: flex;
+      flex-direction: column;
+      padding-left: 10px;
+      font-size: 1rem;
+
+      .top-wrap {
+        display: flex;
+      }
+
+      .location-icon-with-text {
+        display: flex;
+        align-items: center;
+      }
+
+      .location {
+        width: 20px;
+        height: 20px;
+      }
+
+      .icons {
+        margin-left: 90px;
+      }
+
+      .edit-icon,
+      .delete-icon {
+        width: 20px;
+        height: 20px;
+        margin: 10px;
+      }
+
+      .edit-icon:hover,
+      .delete-icon:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__img-text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--img {
+      width: 260px;
+      height: 180px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+      margin: 5px 20px;
+      border-radius: 5px;
+    }
+
+    &--text {
+      width: 260px;
+      height: 100px;
+      margin-top: 5px;
+      overflow-y: scroll;
+
+      .description {
+        text-align: center;
+        color: $text-gray;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .holidayByIdCard {
+    width: 700px;
+    height: 760px;
+
+    &__wrap {
+
+      &--header {
+        font-size: 1.2rem;
+
+        .location {
+          width: 40px;
+          height: 40px;
+        }
+  
+        .icons {
+          margin-left: 320px;
+        }
+  
+        .edit-icon,
+        .delete-icon {
+          width: 40px;
+          height: 40px;
+          margin: 10px;
+        }
+      }
+    }
+
+    &__img-text-wrap {
+      &--img {
+        width: 640px;
+        height: 480px;
+      }
+
+      &--text {
+        width: 640px;
+        height: 200px;
+
+        .description {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

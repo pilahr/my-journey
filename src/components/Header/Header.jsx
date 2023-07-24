@@ -7,6 +7,7 @@ const Header = () => {
   return (
     <div className="heading">
       <h3 className="heading__text">MY JOURNEY</h3>
+
       <div className="heading__links">
         <Link to="/">
           <h4 className="heading__links--text">HOME</h4>
