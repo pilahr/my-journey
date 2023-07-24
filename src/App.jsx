@@ -36,9 +36,9 @@ const App = () => {
         {user && (
           <Routes>
             <Route path="/holidays" element={<Holidays holidays={holidays}/>}/>
-            <Route path="/holiday/:id" element={<HolidayById />} />
+            <Route path="/holiday/:id" element={<HolidayById holidays={holidays}/>} />
             <Route path="/holiday/add" element={<AddHoliday holidays={holidays}/>} />
-            <Route path="/holiday/edit/:id" element={<EditHoliday />} />
+            <Route path="/holiday/edit/:id" element={<EditHoliday holidays={holidays}/>} />
           </Routes>
         )}
       </Router>

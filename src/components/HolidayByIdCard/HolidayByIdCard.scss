@@ -1,0 +1,49 @@
+@use "../../styles/main" as *;
+@use "../../styles/variables" as *;
+
+.holidayByIdCard {
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  border-radius: 5px;
+  width: 320px;
+  height: 360px;
+
+  &__wrap {
+    display: flex;
+    padding: 5px;
+
+    &--header {
+      display: flex;
+      flex-direction: column;
+      padding-left: 10px;
+      font-size: 0.9rem;
+
+      .location {
+        width: 20px;
+      }
+    }
+  }
+
+  &__img-text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &--img {
+      width: 260px;
+      height: 180px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+      margin: 5px 20px;
+    }
+
+    &--text {
+      width: 260px;
+      height: 100px;
+      padding: 5px 20px;
+
+      .description {
+        text-align: center;
+        color: $text-gray;
+      }
+    }
+  }
+}
