@@ -1,5 +1,5 @@
 import React from "react";
-import "./AddHoliday";
+import "./AddHoliday.scss";
 import Header from "../../components/Header/Header";
 import CreateForm from "../../components/Form/CreateForm/CreateForm";
 import { useNavigate } from "react-router-dom";
@@ -39,8 +39,12 @@ const AddHoliday = ({ holidays }) => {
       <div className="add-holiday__header">
         <Header />
       </div>
-      <div >
-        <CreateForm className="add-holiday__form" holidays={holidays} handleSubmit={handleSubmit} defaultFormState={defaultFormState}/>
+      <div className="add-holiday__form">
+        <CreateForm
+          holidays={holidays}
+          handleSubmit={handleSubmit}
+          defaultFormState={defaultFormState}
+        />
       </div>
     </div>
   );

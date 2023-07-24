@@ -4,7 +4,7 @@ import Header from "../../components/Header/Header";
 import HolidayByIdCard from "../../components/HolidayByIdCard/HolidayByIdCard";
 import { useNavigate, useParams } from "react-router-dom";
 
-const HolidayById = ({ holidays }) => {
+const HolidayById = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [holiday, setHoliday] = useState("");
@@ -56,7 +56,6 @@ const HolidayById = ({ holidays }) => {
       alert(message);
     }
   };
-
 
   return (
     <div className="holidayById-page">

@@ -2,7 +2,10 @@
 @use "../../styles/variables" as *;
 
 .add-holiday {
-    &__form {
-
-    }
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+  }
 }
