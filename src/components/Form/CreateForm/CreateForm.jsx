@@ -24,31 +24,16 @@ const CreateForm = ({ holidays, handleSubmit, defaultFormState }) => {
             setHolidayData({ ...holidayData, place: event.target.value })
           }
         />
-        <label className="create-form-container__form--label">
-          Date Of Arrival
-        </label>
+        <label className="create-form-container__form--label">Date</label>
         <input
           className="create-form-container__form--input"
           placeholder="Add arrival date yyyy-mm-dd"
           type="text"
-          value={holidays.arrival}
+          value={holidays.date}
           onInput={(event) =>
-            setHolidayData({ ...holidayData, holidays: event.target.value })
+            setHolidayData({ ...holidayData, date: event.target.value })
           }
         />
-        <label className="create-form-container__form--label">
-          Date Of Departure
-        </label>
-        <input
-          className="create-form-container__form--input"
-          placeholder="Add departure date yyyy-mm-dd"
-          type="text"
-          value={holidays.departure}
-          onInput={(event) =>
-            setHolidayData({ ...holidayData, holidays: event.target.value })
-          }
-        />
-
         <label className="create-form-container__form--label">Image URL</label>
         <input
           className="create-form-container__form--input"
@@ -59,7 +44,9 @@ const CreateForm = ({ holidays, handleSubmit, defaultFormState }) => {
             setHolidayData({ ...holidayData, image: event.target.value })
           }
         />
-        <label className="create-form-container__form--label">Description</label>
+        <label className="create-form-container__form--label">
+          Description
+        </label>
         <input
           className="create-form-container__form--input"
           placeholder="How's the trip"

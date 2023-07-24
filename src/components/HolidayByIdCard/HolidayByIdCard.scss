@@ -5,20 +5,48 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
   border-radius: 5px;
   width: 320px;
-  height: 360px;
+  height: 400px;
 
   &__wrap {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 5px;
 
     &--header {
       display: flex;
       flex-direction: column;
       padding-left: 10px;
-      font-size: 0.9rem;
+      font-size: 1rem;
+
+      .top-wrap {
+        display: flex;
+      }
+
+      .location-icon-with-text {
+        display: flex;
+        align-items: center;
+      }
 
       .location {
         width: 20px;
+        height: 20px;
+      }
+
+      .icons {
+        margin-left: 90px;
+      }
+
+      .edit-icon,
+      .delete-icon {
+        width: 20px;
+        height: 20px;
+        margin: 10px;
+      }
+
+      .edit-icon:hover,
+      .delete-icon:hover {
+        cursor: pointer;
       }
     }
   }
@@ -53,11 +81,28 @@
 @media screen and (min-width: $tablet-breakpoint) {
   .holidayByIdCard {
     width: 700px;
-    height: 680px;
+    height: 760px;
 
     &__wrap {
+
       &--header {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+
+        .location {
+          width: 40px;
+          height: 40px;
+        }
+  
+        .icons {
+          margin-left: 320px;
+        }
+  
+        .edit-icon,
+        .delete-icon {
+          width: 40px;
+          height: 40px;
+          margin: 10px;
+        }
       }
     }
 
@@ -78,4 +123,3 @@
     }
   }
 }
-

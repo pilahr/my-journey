@@ -20,26 +20,6 @@ const HolidayById = () => {
     getHolidayById(id);
   }, []);
 
-  const handleUpdate = async (updatedHoliday) => {
-    const result = await fetch(`http://localhost:8080/holidays/${id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(updatedHoliday),
-    });
-
-    if (result.ok) {
-      alert("Blog updated");
-      const updated = await result.json();
-      setHoliday(updated);
-      // handleShowForm();
-    } else {
-      const message = await result.text();
-      alert(message);
-    }
-  };
-
   const handleDelete = async () => {
     const result = await fetch(`http://localhost:8080/holidays/${id}`, {
       method: "DELETE",
@@ -64,7 +44,7 @@ const HolidayById = () => {
       </div>
 
       <div className="holidayById-page__card">
-        <HolidayByIdCard holiday={holiday} />
+        <HolidayByIdCard holiday={holiday} handleDelete={handleDelete} />
       </div>
     </div>
   );

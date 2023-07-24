@@ -2,31 +2,40 @@ import React from "react";
 import "./HolidayByIdCard.scss";
 import Logo from "../Logo/Logo";
 import Location from "../../assets/images/location.png";
+import Edit from "../../assets/images/edit.png";
+import Delete from "../../assets/images/delete.png";
+import { Link } from "react-router-dom";
 
-const HolidayByIdCard = ({ holiday }) => {
-  const {
-    place,
-    image,
-    date: { arrival },
-    date: { departure },
-    text,
-  } = holiday;
-
-  const arrivalDate = arrival.split("T")[0];
-  const departureDate = departure.split("T")[0];
+const HolidayByIdCard = ({ holiday, handleDelete }) => {
+  const { place, image, date, text, _id } = holiday;
 
   return (
     <div className="holidayByIdCard">
       <div className="holidayByIdCard__wrap">
         <Logo />
+
         <div className="holidayByIdCard__wrap--header">
-          <h4 className="holidayByIdCard-header">
-            <img className="location" src={Location} alt="location pin" />
-            {place}
-          </h4>
-          <p className="holidayByIdCard-date">
-            {arrivalDate} to {departureDate}
-          </p>
+          <div className="top-wrap">
+            <div className="location-icon-with-text">
+              <img className="location" src={Location} alt="location pin" />
+              <h4>{place} </h4>
+            </div>
+
+            <div className="icons">
+              <Link to={`/holiday/edit/${_id}`}>
+                <img src={Edit} alt="edit icon" className="edit-icon" />
+              </Link>
+
+              <img
+                src={Delete}
+                alt="delete icon"
+                className="delete-icon"
+                onClick={handleDelete}
+              />
+            </div>
+          </div>
+
+          <p className="holidayByIdCard-date">{date}</p>
         </div>
       </div>
 
