@@ -9,7 +9,7 @@ const AddHoliday = ({ holidays }) => {
 
 
   const handleSubmit = async (holidays) => {
-    const result = await fetch("http://localhost:8080/holidays", {
+    const result = await fetch("https://my-journey-new-backend.vercel.app/holidays", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

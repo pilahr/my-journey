@@ -12,8 +12,9 @@ const App = () => {
   const [holidays, setHolidays] = useState([]);
 
   const getHolidays = async () => {
-    let url = "http://localhost:8080/holidays";
+    // let url = "http://localhost:8080/holidays";
 
+    let url = "https://my-journey-new-backend.vercel.app/holidays";
     const res = await fetch(url);
     const holidayData = await res.json();
 
@@ -24,8 +25,6 @@ const App = () => {
     getHolidays();
   }, []);
 
-
-
   return (
     <>
       <Router>
@@ -35,9 +34,15 @@ const App = () => {
 
         {user && (
           <Routes>
-            <Route path="/holidays" element={<Holidays holidays={holidays}/>}/>
+            <Route
+              path="/holidays"
+              element={<Holidays holidays={holidays} />}
+            />
             <Route path="/holiday/:id" element={<HolidayById />} />
-            <Route path="/holiday/add" element={<AddHoliday holidays={holidays}/>} />
+            <Route
+              path="/holiday/add"
+              element={<AddHoliday holidays={holidays} />}
+            />
             <Route path="/holiday/edit/:id" element={<EditHoliday />} />
           </Routes>
         )}

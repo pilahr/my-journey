@@ -10,14 +10,16 @@ const EditHoliday = () => {
   const [holiday, setHoliday] = useState("");
 
   const getHolidayById = async (id) => {
-    const url = `http://localhost:8080/holidays/${id}`;
+    // const url = `http://localhost:8080/holidays/${id}`;
+    const url = `https://my-journey-new-backend.vercel.app/holidays/${id}`;
+    
     const response = await fetch(url);
     const holidayData = await response.json();
     setHoliday(holidayData);
   };
 
   const handleUpdate = async (updatedHoliday) => {
-    const result = await fetch(`http://localhost:8080/holidays/${id}`, {
+    const result = await fetch(`https://my-journey-new-backend.vercel.app/holidays/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

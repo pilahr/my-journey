@@ -10,7 +10,8 @@ const HolidayById = () => {
   const [holiday, setHoliday] = useState("");
 
   const getHolidayById = async (id) => {
-    const url = `http://localhost:8080/holidays/${id}`;
+    // const url = `http://localhost:8080/holidays/${id}`;
+    const url = `https://my-journey-new-backend.vercel.app/holidays/${id}`;
     const response = await fetch(url);
     const holidayData = await response.json();
     setHoliday(holidayData);
@@ -21,7 +22,9 @@ const HolidayById = () => {
   }, [id]);
 
   const handleDelete = async () => {
-    const result = await fetch(`http://localhost:8080/holidays/${id}`, {
+    // const url = `http://localhost:8080/holidays/${id}`;
+    const url = `https://my-journey-new-backend.vercel.app/holidays/${id}`;
+    const result = await fetch(`https://my-journey-new-backend.vercel.app/holidays/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
