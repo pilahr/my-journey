@@ -1,5 +1,15 @@
 # My Journey
 
+<img width="1371" alt="B82814DC-8BE9-4690-88ED-A4EAF0B7A8D6" src="https://github.com/pilahr/my-journey/assets/125895065/342d46a1-f0b2-4a22-97f6-2a63d6ad047c">
+
+<img width="385" alt="B33E72ED-495B-4B61-BBE0-FA272D061221" src="https://github.com/pilahr/my-journey/assets/125895065/211eb036-a813-4b54-b11c-edf92a621c1e">
+
+<img width="1055" alt="D679CCAC-4C11-42C8-ADF3-7F5A481F18FB" src="https://github.com/pilahr/my-journey/assets/125895065/b81165b7-196a-4759-9000-87d3ab80db1c">
+
+<img width="1365" alt="31A3225C-B700-4B8F-B357-D2F8D25A9DBB" src="https://github.com/pilahr/my-journey/assets/125895065/065e88b4-c906-4e28-9bd1-79e590a2abdf">
+
+<img width="1368" alt="BD41C6C7-6C59-4A0A-ACB9-8D174310728E" src="https://github.com/pilahr/my-journey/assets/125895065/24e8ba9f-1f2e-45a7-8843-6a9b5d32087b">
+
 
 
 [Live Demo](https://my-journey-20eb0.web.app/)
