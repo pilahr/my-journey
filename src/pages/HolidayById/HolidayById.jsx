@@ -23,7 +23,6 @@ const HolidayById = () => {
 
   const handleDelete = async () => {
     // const url = `http://localhost:8080/holidays/${id}`;
-    const url = `https://my-journey-new-backend.vercel.app/holidays/${id}`;
     const result = await fetch(`https://my-journey-new-backend.vercel.app/holidays/${id}`, {
       method: "DELETE",
       headers: {
